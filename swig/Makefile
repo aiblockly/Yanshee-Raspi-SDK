@@ -15,7 +15,7 @@ all: python_swig $(SUBDIRS)
 python_swig:
 	@cp ../src/RobotApi.c python/
 	@cp ../src/RobotApi.h python/
-	@swig -python python/RobotApi.i
+	@swig -python -py3 python/RobotApi.i
 
 $(SUBDIRS):ECHO
 	make -C $@

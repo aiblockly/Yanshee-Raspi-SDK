@@ -7,7 +7,7 @@ OBJS = $(patsubst %.c,%.o,$(wildcard *.c))
 
 DEPENDS = .depend
 
-INCLUDE_PATH = -I. -I../../include/ -I../../utils/ -I/usr/include/python2.7 
+INCLUDE_PATH = -I. -I../../include/ -I../../utils/ -I/usr/include/python3.5 
 CFLAGS +=  $(INCLUDE_PATH) 
 
 
