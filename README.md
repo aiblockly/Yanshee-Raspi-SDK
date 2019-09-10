@@ -5,6 +5,8 @@
 
 The Yanshee-sdk provides arm-linux based c and python library that allows developers to control YanShee robot
 
+**Notice: This version is not as same as offical version,The offical version is build for py2,this version is for py3**
+
 
 ### Hardware
  
@@ -63,7 +65,7 @@ sudo ldconfig
 ```bash
 cd $YANSHEE_SDK/output
 sudo cp python/RobotApi.py /usr/local/lib/python3.5/dist-packages/
-sudo	cp python/_RobotApi.so /usr/local/lib/python3.5/dist-packages/
+sudo cp python/_RobotApi.so /usr/local/lib/python3.5/dist-packages/
 ```
 PS:MAKE SURE RobotApi.py AND _RobotApi.so ARE IN THE FOLDER /usr/local/lib/python2.7/dist-packages  
 
@@ -72,7 +74,7 @@ This is an example of how to control the robot to hit left. There are some other
 
 ```bash
 cd $YANSHEE_SDK/output/python/example
-python ubtStartRobotAction.py
+python3 ubtStartRobotAction.py
 ```
 
 
