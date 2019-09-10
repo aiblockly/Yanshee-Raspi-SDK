@@ -50,15 +50,20 @@ Please make sure your application can find these LIBs.
 
 
 ```bash
-export LD_LIBRARY_PATH=$YANSHEE_SDK/output/libs/:$LD_LIBRARY_PATH
+cd $YANSHEE_SDK/output
+sudo mkdir -p /opt/YanShee/libs
+sudo cp libs/*.so /opt/YanShee/libs/
+sudo echo /opt/YanShee/libs/ >> /etc/ld.so.conf.d/YanShee.conf
+sudo ldconfig
 ```
 
 
 4. Install python module and library <br>
 
 ```bash
-cd $YANSHEE_SDK/output/python/
-sudo python setup.py install
+cd $YANSHEE_SDK/output
+sudo cp python/RobotApi.py /usr/local/lib/python3.5/dist-packages/
+sudo	cp python/_RobotApi.so /usr/local/lib/python3.5/dist-packages/
 ```
 PS:MAKE SURE RobotApi.py AND _RobotApi.so ARE IN THE FOLDER /usr/local/lib/python2.7/dist-packages  
 
